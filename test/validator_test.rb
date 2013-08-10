@@ -89,4 +89,24 @@ class GlobalPhoneValidatorTest < GlobalPhone::TestCase
     subject(nil, { }, INTERNATIONAL_PHONE_NUMBER)
     assert_equal model.errors, {}
   end
+
+  test "README example 1" do
+    class Person < SuperModel::Base
+      validates :home_phone, :global_phone => true
+    end
+
+    assert_equal true, Person.new(home_phone: INTERNATIONAL_PHONE_NUMBER).valid?
+  end
+
+  test "README example 2" do
+    class User < SuperModel::Base
+      validates :work_phone, :global_phone => { :using => :work_country_code }
+
+      def work_country_code
+        'AU'
+      end
+    end
+
+    assert_equal true, User.new(work_phone: NATIONAL_PHONE_NUMBER).valid?
+  end
 end
