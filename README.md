@@ -174,12 +174,9 @@ GlobalPhone is heavily inspired by Andreas Gal's [PhoneNumber.js](https://github
 **1.0.2** (Unreleased)
 
 * Add GlobalPhone ActiveModel Validator
-<<<<<<< HEAD
 * GlobalPhone::Number#area_code returns the national area code.
 * GlobalPhone::Number#local_number returns the local number.
 * BUGFIX discard extra whitespace when splitting phone numbers
-=======
->>>>>>> e0af9a0... Add global_phone validator
 
 **1.0.1** (May 29, 2013)
 
