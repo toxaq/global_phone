@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gemspec :name => :global_phone
+gemspec
 
 group :test do
   gem 'rake'
