@@ -109,7 +109,7 @@ module GlobalPhone
 
       def national_prefix_formatting_rule
         @national_prefix_formatting_rule ||=
-          format.national_prefix_formatting_rule || territory.national_prefix_formatting_rule
+          format.try(:national_prefix_formatting_rule) || territory.national_prefix_formatting_rule
       end
   end
 end

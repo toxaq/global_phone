@@ -67,6 +67,10 @@ module GlobalPhone
       # Hong Kong has no area code
       number = context.parse("+852 2699 2838")
       assert_equal nil, number.area_code
+
+      # Invalid number
+      number = context.parse('+61 4 1234567')
+      assert_equal nil, number.area_code
     end
 
     test "local_number" do
