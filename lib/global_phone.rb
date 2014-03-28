@@ -1,7 +1,7 @@
 require 'global_phone/context'
 
 module GlobalPhone
-  VERSION = '1.0.3'
+  VERSION = '1.0.4'
 
   class Error < ::StandardError; end
   class NoDatabaseError < Error; end
